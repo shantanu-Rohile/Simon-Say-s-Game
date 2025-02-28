@@ -1,0 +1,70 @@
+/* Center the body content */
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f4f6; /* Subtle background for better visuals */
+    font-family: Arial, sans-serif; /* Better font for clarity */
+}
+
+/* Flex container for buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    gap: 10px; /* Space between boxes for better spacing */
+}
+
+/* Base style for boxes */
+.red, .green, .purple, .yellow {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 8px; /* Slightly rounded corners for better aesthetics */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Individual box colors */
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+/* Hover effect for all boxes */
+.red:hover, .green:hover, .purple:hover, .yellow:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds subtle shadow on hover */
+}
+
+/* Flash effect */
+.flash {
+    background-color: white;
+    animation: flash-effect 1s infinite alternate;
+}
+
+/* Flash animation keyframes */
+@keyframes flash-effect {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: black;
+    }
+}
